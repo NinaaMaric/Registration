@@ -1,4 +1,5 @@
 import React from 'react'
+import './form.css'
 
 const Input = ({ label, error, ...rest }) => {
   return (
@@ -7,7 +8,7 @@ const Input = ({ label, error, ...rest }) => {
       <input {...rest} />
       {error && (
         <div>
-          <span> {error}</span>
+          <span > {error}</span>
         </div>
       )}
     </div>

@@ -27,15 +27,17 @@ function App() {
 
   
   return (
-    <div className="App">
-        <button type="button" onClick={()=>handleSetLanguage('sr')}>
+    <>
+      <div className="btn-lang">
+        <button className="lang" type="button" onClick={()=>handleSetLanguage('sr')}>
           {t('lang.sr') }
         </button>
-        <button type="button" onClick={()=>handleSetLanguage('en')}>
+        <button className="lang" type="button" onClick={()=>handleSetLanguage('en')}>
           {t('lang.en')}
         </button>
+        </div>
       <Registration />
-    </div>
+    </>
   );
 }
 

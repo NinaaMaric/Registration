@@ -26,5 +26,19 @@
     "final": {
         "welcome": "Dobrodošli",
         "message": "Uspiješno ste se registrovali!"
+    },
+    "schema": {
+        "stepOne": {
+            "fnameReq": "Unesite ime",
+            "lNameReq": "Unesite prezime",
+            "usernameReq": "Unesite korisničko ime"
+        },
+        "stepTwo": {
+            "emailReq": "Unesite e-mail adresu",
+            "emailInv": "E-mail adresa nije validna",
+            "passReq": "Unesite lozinku",
+            "confPass": "Lozinke se ne podudaraju!"
+        }
+
     }
   }

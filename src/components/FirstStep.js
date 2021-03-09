@@ -5,13 +5,14 @@ import Input from "../smartComponents/Input";
 import Button from "../smartComponents/Button";
 import Loader from "react-loader-spinner";
 import {t} from 'react-switch-lang';
+import "./register.css"
 
 const FirstStep = ({ step, setStep, user, setUser }) => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
-  // handle onchange
-  const handleUser = ({ target }) => {
+  
+  const handleStepOne = ({ target }) => {
     setUser({
       type: "STEP_01",
       payload: { [target.name]: target.value },
@@ -27,7 +28,6 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
     setIsLoading(true)
     setStep(step + 1);
     
-    console.log();
   };
 
   return (
@@ -41,13 +41,13 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
          timeout={2000} //2 secs
        />
       ) : (
-        <form onSubmit={handleContinue} className="">
+        <form onSubmit={handleContinue}>
           <Input
             type="text"
             name="firstName"
             value={user.firstName}
             label={t('firstStep.fName')}
-            onChange={(e) => handleUser(e)}
+            onChange={(e) => handleStepOne(e)}
             error={errors.firstName}
           />
           <Input
@@ -55,7 +55,7 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
             name="lastName"
             value={user.lastName}
             label={t('firstStep.lName')}
-            onChange={(e) => handleUser(e)}
+            onChange={(e) => handleStepOne(e)}
             error={errors.lastName}
           />
           <Input
@@ -63,7 +63,7 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
             label={t('firstStep.username')}
             name="username"
             value={user.username}
-            onChange={(e) => handleUser(e)}
+            onChange={(e) => handleStepOne(e)}
             error={errors.username}
           />
           <Button type="submit"> {t('firstStep.next')} </Button>
@@ -72,6 +72,7 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
     </>
   );
 };
+
 FirstStep.propTypes = {
   step: PropTypes.number,
   setStep: PropTypes.func,

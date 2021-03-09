@@ -9,12 +9,10 @@ const Registration = () => {
   let steps = FormSteps(step, setStep, user, setUser)
 
   return (
-    <div className="">
-      <h1>{t('registration.user')} {steps[`${step}`].title} </h1>
-      <h4>
-      {t('registration.step')} {step + 1}/{steps.length}
-      </h4>
-      <div className="">{steps[`${step}`].content}</div>
+    <div className="form-register">
+      <h1>{t('registration.user')} </h1>
+      <h4>{t('registration.step')} {step + 1}/{steps.length}</h4>
+      <div>{steps[`${step}`].content}</div>
     </div>
   )
 }

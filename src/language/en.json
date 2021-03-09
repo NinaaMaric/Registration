@@ -26,5 +26,19 @@
     "final": {
         "welcome": "Welcome",
         "message": "You have successfully registered!"
+    },
+    "schema": {
+        "stepOne": {
+            "fnameReq": "First name is required",
+            "lNameReq": "Last name is required",
+            "usernameReq": "Username is required"
+        },
+        "stepTwo": {
+            "emailReq": "E-mail address is required",
+            "emailInv": "E-mail address is invalid",
+            "passReq": "Password is required",
+            "confPass": "Passwords must be the same!"
+        }
+
     }
   }

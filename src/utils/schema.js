@@ -1,14 +1,15 @@
+import { t } from "react-switch-lang"
 
 export const StepOne = (values) => {
     let errors = {}
     if (!values.firstName) {
-      errors.firstName = 'First name is required'
+      errors.firstName = t('schema.stepOne.fnameReq')
     }
     if (!values.lastName) {
-      errors.lastName = 'Last name is required'
+      errors.lastName = t('schema.stepOne.lNameReq')
     }
     if (!values.username) {
-      errors.username = 'Phone number is required'
+      errors.username = t('schema.stepOne.usernameReq')
     }
    
     return errors
@@ -19,19 +20,19 @@ export const StepOne = (values) => {
       console.log(values.stepTwo.password);
     let errors = {}
     if (!values.stepTwo.email) {
-      errors.email = 'Email address is required'
+      errors.email = t('schema.stepTwo.emailReq')
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/) {
-      errors.email = 'Email address is invalid'
+      errors.email = t('schema.stepTwo.emailInv')
     } 
     if (!values.stepTwo.password) {
-      errors.password = 'Password is required'
+      errors.password = t('schema.stepTwo.passReq')
     } else if ('') {
       errors.password = 'Password must contain ...'
     } 
     if (!values.stepTwo.confirmPassword) {
-      errors.confirmPassword = 'Password address is required'
+      errors.confirmPassword = t('schema.stepTwo.passReq')
     } else if (values.stepTwo.password !== values.stepTwo.confirmPassword) {
-      errors.confirmPassword = 'Password must be the same'
+      errors.confirmPassword = t('schema.stepTwo.confPass')
     } 
   
     return errors

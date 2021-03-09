@@ -1,0 +1,29 @@
+.form-register {
+  padding: 38px 100px;
+  border-top: 10px solid #f45702;
+  background-image: url("../img/monekey02.jpeg");
+  background-size: cover;
+  background-position: top;
+  height: 58vh;
+}
+.form-register h1,
+.form-register h4 {
+  color: #52240d;
+  text-align: center;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 18px;
+}
+.final {
+  color: #fff;
+  margin-top: 6rem;
+  font-size: 22px;
+}
+.show-hide {
+  display: block;
+  float: right;
+  margin-top: -34px;
+  font-size: 12px;
+}
