@@ -40,7 +40,8 @@
             "emailInv": "E-mail adresa nije validna",
             "passReq": "Unesite lozinku",
             "confPass": "Lozinke se ne podudaraju!",
-            "min8": "Lozinka ne smije biti kraća od 8 karaktera"
+            "min8": "Lozinka ne smije biti kraća od 8 karaktera",
+            "passValidation": ""
         }
 
     }

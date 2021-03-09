@@ -40,7 +40,8 @@
             "emailInv": "E-mail address is invalid",
             "passReq": "Password is required",
             "confPass": "Passwords must be the same!",
-            "min8": "Password must contain min 8 characters"
+            "min8": "Password must contain min 8 characters",
+            "passValidation": " "
         }
 
     }

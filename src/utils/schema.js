@@ -38,15 +38,11 @@ export const StepTwo = (values) => {
   }
   if (!values.stepTwo.password) {
     errors.password = t("schema.stepTwo.passReq");
-  } else if (values.password.trim().length < 8) {
-    errors.password = t("schema.stepOne.min8");
-  } else if ("") {
-    errors.password = "Password must contain ...";
+  }  else if (!/^(?=.*\\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/) {
+    errors.password = t("schema.stepTwo.passValidation");;
   }
   if (!values.stepTwo.confirmPassword) {
     errors.confirmPassword = t("schema.stepTwo.passReq");
-  } else if (values.confirmPassword.trim().length < 8) {
-    errors.confirmPassword = t("schema.stepOne.min8");
   } else if (values.stepTwo.password !== values.stepTwo.confirmPassword) {
     errors.confirmPassword = t("schema.stepTwo.confPass");
   }
