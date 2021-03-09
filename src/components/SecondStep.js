@@ -52,7 +52,7 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         value={user.stepTwo.password}
         onChange={(e) => handleStepTwo(e)}
         error={errors.password}
-      /> <i class="show-hide" onClick={togglePasswordVisiblity}>Show/hide</i>
+      /> <i className="show-hide" onClick={togglePasswordVisiblity}>Show/hide</i>
      
       <Input
         type={passwordShown2 ? "text" : "password"}
@@ -61,9 +61,9 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         value={user.stepTwo.confirmPassword}
         onChange={(e) => handleStepTwo(e)}
         error={errors.confirmPassword}
-      /> <i class="show-hide" onClick={togglePasswordVisiblity2}>Show/hide</i>
+      /> <i className="show-hide" onClick={togglePasswordVisiblity2}>Show/hide</i>
       
-      <div class="btn-group">
+      <div className="btn-group">
         <Button onClick={() => setStep(step - 1)} type="button">
           {t("secondStep.back")}
         </Button>

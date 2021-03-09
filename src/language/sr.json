@@ -31,13 +31,16 @@
         "stepOne": {
             "fnameReq": "Unesite ime",
             "lNameReq": "Unesite prezime",
-            "usernameReq": "Unesite korisničko ime"
+            "usernameReq": "Unesite korisničko ime",
+            "min3": "Ovo polje mora sadržati min 3 karaktera",
+            "max50": "Ovo polje mora sadržati max 50 karaktera"
         },
         "stepTwo": {
             "emailReq": "Unesite e-mail adresu",
             "emailInv": "E-mail adresa nije validna",
             "passReq": "Unesite lozinku",
-            "confPass": "Lozinke se ne podudaraju!"
+            "confPass": "Lozinke se ne podudaraju!",
+            "min8": "Lozinka ne smije biti kraća od 8 karaktera"
         }
 
     }

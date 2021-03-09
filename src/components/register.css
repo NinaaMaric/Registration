@@ -4,7 +4,7 @@
   background-image: url("../img/monekey02.jpeg");
   background-size: cover;
   background-position: top;
-  height: 58vh;
+  height: 70vh;
 }
 .form-register h1,
 .form-register h4 {
@@ -26,4 +26,5 @@
   float: right;
   margin-top: -34px;
   font-size: 12px;
+  cursor: pointer;
 }

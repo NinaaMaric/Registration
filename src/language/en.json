@@ -31,13 +31,16 @@
         "stepOne": {
             "fnameReq": "First name is required",
             "lNameReq": "Last name is required",
-            "usernameReq": "Username is required"
+            "usernameReq": "Username is required",
+            "min3": "This field must contain min 3 characters",
+            "max50": "This field must contain max 50 characters"
         },
         "stepTwo": {
             "emailReq": "E-mail address is required",
             "emailInv": "E-mail address is invalid",
             "passReq": "Password is required",
-            "confPass": "Passwords must be the same!"
+            "confPass": "Passwords must be the same!",
+            "min8": "Password must contain min 8 characters"
         }
 
     }
