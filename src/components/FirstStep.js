@@ -4,6 +4,7 @@ import { StepOne } from "../utils/schema";
 import Input from "../smartComponents/Input";
 import Button from "../smartComponents/Button";
 import Loader from "react-loader-spinner";
+import {t} from 'react-switch-lang';
 
 const FirstStep = ({ step, setStep, user, setUser }) => {
   const [errors, setErrors] = useState({});
@@ -45,7 +46,7 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
             type="text"
             name="firstName"
             value={user.firstName}
-            label="First name"
+            label={t('firstStep.fName')}
             onChange={(e) => handleUser(e)}
             error={errors.firstName}
           />
@@ -53,19 +54,19 @@ const FirstStep = ({ step, setStep, user, setUser }) => {
             type="text"
             name="lastName"
             value={user.lastName}
-            label="Last name"
+            label={t('firstStep.lName')}
             onChange={(e) => handleUser(e)}
             error={errors.lastName}
           />
           <Input
             type="text"
-            label="Username"
+            label={t('firstStep.username')}
             name="username"
             value={user.username}
             onChange={(e) => handleUser(e)}
             error={errors.username}
           />
-          <Button type="submit"> Continue</Button>
+          <Button type="submit"> {t('firstStep.next')} </Button>
         </form>
       )}
     </>

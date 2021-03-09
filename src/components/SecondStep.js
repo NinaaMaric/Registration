@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
  import { StepTwo } from '../utils/schema' 
 import Button from '../smartComponents/Button'
 import Input from '../smartComponents/Input'
+import {t} from 'react-switch-lang';
 
 const SecondStep = ({ step, setStep, user, setUser }) => {
   const [errors, setErrors] = useState({})
@@ -28,7 +29,7 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
     <form onSubmit={handleSubmit} className="">
       <Input
         type="email"
-        label="E-mail"
+        label={t('secondStep.email')}
         name="email"
         value={user.stepTwo.email}
         onChange={(e) => handleNextOfKin(e)}
@@ -36,7 +37,7 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
       />
       <Input
         type="text"
-        label="Password"
+        label={t('secondStep.pass')}
         name="password"
         value={user.stepTwo.password}
         onChange={(e) => handleNextOfKin(e)}
@@ -44,7 +45,7 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
       />
       <Input
         type="text"
-        label="Confirm password"
+        label={t('secondStep.confirmPass')}
         name="confirmPassword"
         value={user.stepTwo.confirmPassword}
         onChange={(e) => handleNextOfKin(e)}
@@ -52,9 +53,9 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
       />
       <div className="">
         <Button onClick={() => setStep(step - 1)} type="button">
-          Back
+          {t('secondStep.back')}
         </Button>
-        <Button type="submit"> Submit</Button>
+        <Button type="submit"> {t('secondStep.submit')} </Button>
       </div>
     </form>
   )

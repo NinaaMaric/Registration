@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { t } from 'react-switch-lang'
 
 const Completed = ({ user }) => (
   <div>
     <p>
-      Welcome, <b>{`${user.firstName} ${user.lastName}`}</b>{' '}
+      {t('final.welcome')}, <b>{`${user.firstName} ${user.lastName}`}</b>{' '}
     </p>
-    <p> You have successfully registered</p>
+    <p> {t('final.message')}</p>
   </div>
 )
 

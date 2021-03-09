@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from 'react'
+import { t } from 'react-switch-lang'
 import { UserReducer, DefaultUser } from '../utils/user-reducer'
-
 import FormSteps from './Steps'
 
 const Registration = () => {
@@ -10,9 +10,9 @@ const Registration = () => {
 
   return (
     <div className="">
-      <h1>Register User: {steps[`${step}`].title} </h1>
+      <h1>{t('registration.user')} {steps[`${step}`].title} </h1>
       <h4>
-        Step {step + 1}/{steps.length}
+      {t('registration.step')} {step + 1}/{steps.length}
       </h4>
       <div className="">{steps[`${step}`].content}</div>
     </div>

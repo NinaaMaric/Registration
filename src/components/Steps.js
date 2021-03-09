@@ -2,22 +2,23 @@ import React from "react";
 import FirstStep from "./FirstStep";
 import SecondStep from "./SecondStep";
 import Completed from "./Final";
+import {t} from 'react-switch-lang';
 
 const FormSteps = (step, setStep, user, setUser) => [
   {
-    title: "Step01",
+    title: t('registration.step01'),
     content: (
       <FirstStep setStep={setStep} step={step} user={user} setUser={setUser} />
     ),
   },
   {
-    title: "Step02",
+    title: t('registration.step02'),
     content: (
       <SecondStep setStep={setStep} step={step} user={user} setUser={setUser} />
     ),
   },
   {
-    title: "Complete",
+    title: t('registration.complete'),
     content: <Completed user={user} />,
   },
 ];

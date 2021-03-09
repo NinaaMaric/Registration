@@ -1,0 +1,30 @@
+{
+    "lang": {
+        "en": "English",
+        "sr": "Serbian"
+    },
+    "registration":{
+        "user": "Register user",
+        "step": "Step",
+        "step01": "Step 1",
+        "step02": "Step 2",
+        "complete": "Complete"
+    },
+    "firstStep":{
+        "fName": "First name",
+        "lName": "Last name",
+        "username": "Username",
+        "next": "Next step"
+    },
+    "secondStep": {
+        "email": "E-mail",
+        "pass": "Password",
+        "confirmPass": "Confirm password",
+        "back": "Back",
+        "submit": "Submit"
+    },
+    "final": {
+        "welcome": "Welcome",
+        "message": "You have successfully registered!"
+    }
+  }

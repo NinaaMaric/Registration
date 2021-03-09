@@ -1,0 +1,30 @@
+{
+    "lang": {
+        "en": "Engleski",
+        "sr": "Srpski"
+    },
+    "registration":{
+        "user": "Registracija korisnika",
+        "step": "Korak",
+        "step01": "Korak 1",
+        "step02": "Korak 2",
+        "complete": "Završena"
+    },
+    "firstStep":{
+        "fName": "Ime",
+        "lName": "Prezime",
+        "username": "Korisničko ime",
+        "next": "Sledeći korak"
+    },
+    "secondStep": {
+        "email": "E-mail",
+        "pass": "Lozinka",
+        "confirmPass": "Potvrdi lozinku",
+        "back": "Nazad",
+        "submit": "Prihvati"
+    },
+    "final": {
+        "welcome": "Dobrodošli",
+        "message": "Uspiješno ste se registrovali!"
+    }
+  }
