@@ -35,7 +35,7 @@ label h1,h4{
   bottom: 0;
   left: 0;
   animation: animatedMonk 11s alternate infinite ease-in-out;
-  width: 150px;
+  width: 130px;
 }
 
 @keyframes animatedMonk{

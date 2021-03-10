@@ -62,13 +62,10 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
           error={errors.password}
         />
         <span className="show-hide" onClick={togglePasswordVisiblity}>
-          <img src={Eye} alt="" />
+          <img src={Eye} alt="eye" />
         </span>
       </div>
-      <div
-        className={`form-monk-group ${
-          errors.confirmPassword !== "" ? "" : "error"
-        }`}
+      <div className={`form-monk-group ${ errors.confirmPassword !== "" ? "" : "errors"}`}
       >
         <Input
           type={passwordShown2 ? "text" : "password"}
@@ -79,14 +76,14 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
           error={errors.confirmPassword}
         />
         <span className="show-hide" onClick={togglePasswordVisiblity2}>
-          <img src={Eye} alt="" />
+          <img src={Eye} alt="eye" />
         </span>
       </div>
 
-
-      <p className="terms-modal" onClick={() => setShow(true)}>{t("secondStep.terms")}</p>
+      <p className="terms-modal" onClick={() => setShow(true)}>
+        {t("secondStep.terms")}
+      </p>
       <Modal show={show} setShow={setShow} />
-
 
       <Input
         type="checkbox"
