@@ -2,7 +2,8 @@
   text-align: center;
 }
 body{
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg") center center no-repeat;
+  /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg") center center no-repeat; */
+  background-color: #ce771542;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -14,7 +15,6 @@ body{
 .btn-lang{
   display: flex;
   justify-content: center;
-  color: red;
 }
 label h1,h4{
   color: #52240d;

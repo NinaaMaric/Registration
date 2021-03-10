@@ -21,7 +21,8 @@
         "pass": "Password",
         "confirmPass": "Confirm password",
         "back": "Back",
-        "submit": "Submit"
+        "submit": "Submit",
+        "terms": "I agree to the terms and conditions"
     },
     "final": {
         "welcome": "Welcome",
@@ -41,7 +42,8 @@
             "passReq": "Password is required",
             "confPass": "Passwords must be the same!",
             "min8": "Password must contain min 8 characters",
-            "passValidation": " "
+            "passValidation": " ",
+            "terms": "This field must be checked"
         }
 
     }

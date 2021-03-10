@@ -6,7 +6,7 @@ label {
 label,
 input {
   display: flex;
-  width: 100%;
+  width: 350px;
   font-size: 20px;
   line-height: 22px;
   font-family: "Spartan";
@@ -21,7 +21,7 @@ input {
   outline: none;
 }
 span {
-  font-size: 14px;
+  font-size: 15px;
   /* font-weight: bold; */
   color: tomato;
 }
@@ -44,7 +44,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: inherit;
+  background: #dfae4b65;
   color: #f45702;
   border-bottom: 2px solid #dfad4b;
 }

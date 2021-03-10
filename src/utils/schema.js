@@ -30,6 +30,7 @@ export const StepOne = (values) => {
 };
 
 export const StepTwo = (values) => {
+  console.log(values);
   let errors = {};
   if (!values.stepTwo.email) {
     errors.email = t("schema.stepTwo.emailReq");
@@ -38,13 +39,16 @@ export const StepTwo = (values) => {
   }
   if (!values.stepTwo.password) {
     errors.password = t("schema.stepTwo.passReq");
-  }  else if (!/^(?=.*\\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/) {
-    errors.password = t("schema.stepTwo.passValidation");;
+  } else if (!/^(?=.*\\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/) {
+    errors.password = t("schema.stepTwo.passValidation");
   }
   if (!values.stepTwo.confirmPassword) {
     errors.confirmPassword = t("schema.stepTwo.passReq");
   } else if (values.stepTwo.password !== values.stepTwo.confirmPassword) {
     errors.confirmPassword = t("schema.stepTwo.confPass");
+  }
+  if (!values.stepTwo.checkbox) {
+    errors.checkbox = t("schema.stepTwo.terms");
   }
 
   return errors;

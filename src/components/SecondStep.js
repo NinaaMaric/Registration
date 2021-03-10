@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { StepTwo } from "../utils/schema";
-import Button from "../smartComponents/Button";
-import Input from "../smartComponents/Input";
+import Button from "./smartComponents/Button";
+import Input from "./smartComponents/Input";
 import { t } from "react-switch-lang";
 
 const SecondStep = ({ step, setStep, user, setUser }) => {
+  const [agree, setAgree] = useState(false);
   const [passwordShown, setPasswordShown] = useState(false);
   const [passwordShown2, setPasswordShown2] = useState(false);
   const [errors, setErrors] = useState({});
@@ -17,11 +18,10 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
     setPasswordShown2(passwordShown2 ? false : true);
   };
 
-  // handle onchange
   const handleStepTwo = ({ target }) => {
     setUser({
       type: "STEP_02",
-      payload: { [target.name]: target.value },
+      payload: { [target.name]: target.value || target.checked },
     });
   };
 
@@ -29,8 +29,8 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
     e.preventDefault();
     const errors = StepTwo(user);
     setErrors(errors);
-    if (Object.keys(errors).length > 0) return;
-
+    if (Object.keys(errors).length > 0) return
+    setAgree(!agree);
     setStep(step + 1);
   };
 
@@ -44,7 +44,6 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         onChange={(e) => handleStepTwo(e)}
         error={errors.email}
       />
-     
       <Input
         type={passwordShown ? "text" : "password"}
         label={t("secondStep.pass")}
@@ -52,8 +51,10 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         value={user.stepTwo.password}
         onChange={(e) => handleStepTwo(e)}
         error={errors.password}
-      /> <i className="show-hide" onClick={togglePasswordVisiblity}>Show/hide</i>
-     
+      />
+      <i className="show-hide" onClick={togglePasswordVisiblity}>
+        Show/hide
+      </i>
       <Input
         type={passwordShown2 ? "text" : "password"}
         label={t("secondStep.confirmPass")}
@@ -61,17 +62,33 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         value={user.stepTwo.confirmPassword}
         onChange={(e) => handleStepTwo(e)}
         error={errors.confirmPassword}
-      /> <i className="show-hide" onClick={togglePasswordVisiblity2}>Show/hide</i>
-      
+      />
+      <i className="show-hide" onClick={togglePasswordVisiblity2}>
+        Show/hide
+      </i>
+
+      <Input
+        type="checkbox"
+        label={t("secondStep.terms")}
+        name="checkbox"
+        value={user.stepTwo.checkbox}
+        onChange={(e) => handleStepTwo(e)}
+        error={errors.checkbox}
+        style={{ height: "20px" }}
+      />
+
       <div className="btn-group">
         <Button onClick={() => setStep(step - 1)} type="button">
           {t("secondStep.back")}
         </Button>
-        <Button type="submit"> {t("secondStep.submit")} </Button>
+        <Button type="submit">
+          {t("secondStep.submit")}
+        </Button>
       </div>
     </form>
   );
 };
+
 SecondStep.propTypes = {
   step: PropTypes.number,
   setStep: PropTypes.func,

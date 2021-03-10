@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { StepOne } from "../utils/schema";
-import Input from "../smartComponents/Input";
-import Button from "../smartComponents/Button";
+import Input from "./smartComponents/Input";
+import Button from "./smartComponents/Button";
 import Loader from "react-loader-spinner";
 import {t} from 'react-switch-lang';
 import "./register.css"

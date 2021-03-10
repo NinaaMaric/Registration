@@ -6,6 +6,7 @@ export const DefaultUser = {
       email: '',
       password: '',
       confirmPassword: '',
+      checkbox: '',
     },
   }
   

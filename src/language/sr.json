@@ -21,7 +21,8 @@
         "pass": "Lozinka",
         "confirmPass": "Potvrdi lozinku",
         "back": "Nazad",
-        "submit": "Prihvati"
+        "submit": "Prihvati",
+        "terms": "Slažem se sa pravilima i uslovima "
     },
     "final": {
         "welcome": "Dobrodošli",
@@ -41,7 +42,8 @@
             "passReq": "Unesite lozinku",
             "confPass": "Lozinke se ne podudaraju!",
             "min8": "Lozinka ne smije biti kraća od 8 karaktera",
-            "passValidation": ""
+            "passValidation": "",
+            "terms": "Ovo polje mora biti čekirano"
         }
 
     }
