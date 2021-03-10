@@ -3,7 +3,7 @@ import './form.css'
 
 const Input = ({ label, error, ...rest }) => {
   return (
-    <div>
+    <>
       <label>{label}</label>
       <input {...rest} />
       {error && (
@@ -11,7 +11,7 @@ const Input = ({ label, error, ...rest }) => {
           <span > {error}</span>
         </div>
       )}
-    </div>
+    </>
   )
 }
 export default Input

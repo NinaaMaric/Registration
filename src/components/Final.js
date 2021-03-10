@@ -4,8 +4,9 @@ import { t } from 'react-switch-lang'
 
 const Completed = ({ user }) => (
   <div className="final">
-    <p className="text-center">
+     <p >
       {t('final.welcome')}, <b>{`${user.firstName} ${user.lastName}`}</b>!</p>
+      <p>{t('final.username')} <b>{`${user.username}`}</b> {t('final.and')} {t('final.email')} <b>{`${user.stepTwo.email}`}</b></p>
     <p> {t('final.message')}</p>
   </div>
 )

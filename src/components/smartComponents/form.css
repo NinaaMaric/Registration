@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
 
+
+form{
+  padding: 0 2rem;
+}
+
+form div{
+  width: 100%;
+}
+
 label {
-  color: #f8f4e5;
+  color: #dfad4b;
 }
 label,
 input {
   display: flex;
-  width: 350px;
+  width: calc(100% - 2rem);
   font-size: 20px;
   line-height: 22px;
   font-family: "Spartan";
@@ -15,8 +24,8 @@ input {
 }
 input {
   border: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   padding: 12px;
   outline: none;
 }
@@ -42,9 +51,10 @@ button {
   outline: none;
   margin-top: 15px;
   cursor: pointer;
+  border-radius: 10px;
 }
 button:hover {
-  background: #dfae4b65;
+  background: #dfae4bb4;
   color: #f45702;
   border-bottom: 2px solid #dfad4b;
 }

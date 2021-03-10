@@ -4,6 +4,8 @@ import { StepTwo } from "../utils/schema";
 import Button from "./smartComponents/Button";
 import Input from "./smartComponents/Input";
 import { t } from "react-switch-lang";
+import Eye from "../img/eye.png";
+import Modal from "./Modal";
 
 const SecondStep = ({ step, setStep, user, setUser }) => {
   const [agree, setAgree] = useState(false);
@@ -11,9 +13,12 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
   const [passwordShown2, setPasswordShown2] = useState(false);
   const [errors, setErrors] = useState({});
 
+  const [show, setShow] = useState(false);
+
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+
   const togglePasswordVisiblity2 = () => {
     setPasswordShown2(passwordShown2 ? false : true);
   };
@@ -29,11 +34,12 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
     e.preventDefault();
     const errors = StepTwo(user);
     setErrors(errors);
-    if (Object.keys(errors).length > 0) return
+    if (Object.keys(errors).length > 0) return;
     setAgree(!agree);
     setStep(step + 1);
   };
 
+  console.log(errors);
   return (
     <form onSubmit={handleSubmit}>
       <Input
@@ -44,32 +50,46 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         onChange={(e) => handleStepTwo(e)}
         error={errors.email}
       />
-      <Input
-        type={passwordShown ? "text" : "password"}
-        label={t("secondStep.pass")}
-        name="password"
-        value={user.stepTwo.password}
-        onChange={(e) => handleStepTwo(e)}
-        error={errors.password}
-      />
-      <i className="show-hide" onClick={togglePasswordVisiblity}>
-        Show/hide
-      </i>
-      <Input
-        type={passwordShown2 ? "text" : "password"}
-        label={t("secondStep.confirmPass")}
-        name="confirmPassword"
-        value={user.stepTwo.confirmPassword}
-        onChange={(e) => handleStepTwo(e)}
-        error={errors.confirmPassword}
-      />
-      <i className="show-hide" onClick={togglePasswordVisiblity2}>
-        Show/hide
-      </i>
+      <div
+        className={`form-monk-group ${errors.passowrd !== "" ? "" : "error"}`}
+      >
+        <Input
+          type={passwordShown ? "text" : "password"}
+          label={t("secondStep.pass")}
+          name="password"
+          value={user.stepTwo.password}
+          onChange={(e) => handleStepTwo(e)}
+          error={errors.password}
+        />
+        <span className="show-hide" onClick={togglePasswordVisiblity}>
+          <img src={Eye} alt="" />
+        </span>
+      </div>
+      <div
+        className={`form-monk-group ${
+          errors.confirmPassword !== "" ? "" : "error"
+        }`}
+      >
+        <Input
+          type={passwordShown2 ? "text" : "password"}
+          label={t("secondStep.confirmPass")}
+          name="confirmPassword"
+          value={user.stepTwo.confirmPassword}
+          onChange={(e) => handleStepTwo(e)}
+          error={errors.confirmPassword}
+        />
+        <span className="show-hide" onClick={togglePasswordVisiblity2}>
+          <img src={Eye} alt="" />
+        </span>
+      </div>
+
+
+      <p className="terms-modal" onClick={() => setShow(true)}>{t("secondStep.terms")}</p>
+      <Modal show={show} setShow={setShow} />
+
 
       <Input
         type="checkbox"
-        label={t("secondStep.terms")}
         name="checkbox"
         value={user.stepTwo.checkbox}
         onChange={(e) => handleStepTwo(e)}
@@ -81,9 +101,7 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         <Button onClick={() => setStep(step - 1)} type="button">
           {t("secondStep.back")}
         </Button>
-        <Button type="submit">
-          {t("secondStep.submit")}
-        </Button>
+        <Button type="submit">{t("secondStep.submit")}</Button>
       </div>
     </form>
   );

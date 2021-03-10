@@ -22,11 +22,15 @@
         "confirmPass": "Confirm password",
         "back": "Back",
         "submit": "Submit",
-        "terms": "I agree to the terms and conditions"
+        "terms": "I agree to the terms and conditions",
+        "modalTerms": "Terms and conditions"
     },
     "final": {
         "welcome": "Welcome",
-        "message": "You have successfully registered!"
+        "message": "You have successfully registered!",
+        "username": "Your username is",
+        "email": "e-mail",
+        "and": "and"
     },
     "schema": {
         "stepOne": {

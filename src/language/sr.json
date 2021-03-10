@@ -22,11 +22,15 @@
         "confirmPass": "Potvrdi lozinku",
         "back": "Nazad",
         "submit": "Prihvati",
-        "terms": "Slažem se sa pravilima i uslovima "
+        "terms": "Slažem se sa pravilima i uslovima ",
+        "modalTerms": "Pravila i uslovi"
     },
     "final": {
         "welcome": "Dobrodošli",
-        "message": "Uspiješno ste se registrovali!"
+        "message": "Uspiješno ste se registrovali!",
+        "username": "Vaše korisničko ime je",
+        "email": "e-mail",
+        "and": "i"
     },
     "schema": {
         "stepOne": {
