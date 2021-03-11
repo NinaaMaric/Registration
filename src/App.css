@@ -46,3 +46,7 @@ label h1,h4{
     left: 85%;
   }
 }
+
+body.swal2-height-auto{
+  height: 100vh !important;
+}

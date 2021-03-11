@@ -6,6 +6,7 @@ import Input from "./smartComponents/Input";
 import { t } from "react-switch-lang";
 import Eye from "../img/eye.png";
 import Modal from "./Modal";
+import Swal from 'sweetalert2';
 
 const SecondStep = ({ step, setStep, user, setUser }) => {
   const [agree, setAgree] = useState(false);
@@ -34,9 +35,25 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
     e.preventDefault();
     const errors = StepTwo(user);
     setErrors(errors);
-    if (Object.keys(errors).length > 0) return;
     setAgree(!agree);
-    setStep(step + 1);
+    return new Promise((resolve, reject) => {
+      if (Object.keys(errors).length > 0) {
+        setTimeout(() => {
+          reject(console.log('Error'))
+        }, 250);
+      }else {
+        setTimeout(() => {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: t('secondStep.message'),
+            showConfirmButton: false,
+            timer: 1500
+          })
+          resolve(setStep(step + 1))
+        }, 200);
+      }
+    })
   };
 
   console.log(errors);
@@ -80,19 +97,26 @@ const SecondStep = ({ step, setStep, user, setUser }) => {
         </span>
       </div>
 
-      <p className="terms-modal" onClick={() => setShow(true)}>
-        {t("secondStep.terms")}
-      </p>
+       <div className="terms-check">
+        <div className="wrapp">
+          <p className="terms-modal" onClick={() => setShow(true)}>
+            {t("secondStep.terms")}
+          </p>
+          <input
+            type="checkbox"
+            name="checkbox"
+            value={user.stepTwo.checkbox}
+            onChange={(e) => handleStepTwo(e)}
+            style={{ height: "20px" }}
+          />
+        </div>
+        {errors.checkbox && (
+          <div>
+            <span>{errors.checkbox}</span>
+          </div>
+        )}
+      </div>
       <Modal show={show} setShow={setShow} />
-
-      <Input
-        type="checkbox"
-        name="checkbox"
-        value={user.stepTwo.checkbox}
-        onChange={(e) => handleStepTwo(e)}
-        error={errors.checkbox}
-        style={{ height: "20px" }}
-      />
 
       <div className="btn-group">
         <Button onClick={() => setStep(step - 1)} type="button">

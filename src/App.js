@@ -39,7 +39,7 @@ function App() {
       {loading ? (
         <Loader
           type="TailSpin"
-          color="tomato"
+          color="#dfad4b"
           height={100}
           width={100}
           timeout={3000}

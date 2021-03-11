@@ -100,3 +100,21 @@ h3{
   color: #dfad4b;
   transition: .3s ease-in-out;
 }
+
+
+.terms-check .wrapp{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.terms-check label{
+  display: none;
+}
+
+.terms-check p{
+  font-size: 14px;
+  white-space: nowrap;
+  text-decoration: underline;
+  font-style: italic;
+}

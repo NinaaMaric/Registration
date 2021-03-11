@@ -23,13 +23,13 @@
         "back": "Back",
         "submit": "Submit",
         "terms": "I agree to the terms and conditions",
-        "modalTerms": "Terms and conditions"
+        "modalTerms": "Terms and conditions",
+        "message": "You have successfully registered!"
     },
     "final": {
         "welcome": "Welcome",
-        "message": "You have successfully registered!",
         "username": "Your username is",
-        "email": "e-mail",
+        "email": "E-mail",
         "and": "and"
     },
     "schema": {
@@ -37,8 +37,8 @@
             "fnameReq": "First name is required",
             "lNameReq": "Last name is required",
             "usernameReq": "Username is required",
-            "min3": "This field must contain min 3 characters",
-            "max50": "This field must contain max 50 characters"
+            "min3": "This field must contain more than 3 characters",
+            "max50": "This field must contain less then 50 characters"
         },
         "stepTwo": {
             "emailReq": "E-mail address is required",

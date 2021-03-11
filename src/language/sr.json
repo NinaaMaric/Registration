@@ -23,13 +23,13 @@
         "back": "Nazad",
         "submit": "Prihvati",
         "terms": "Slažem se sa pravilima i uslovima ",
-        "modalTerms": "Pravila i uslovi"
+        "modalTerms": "Pravila i uslovi",
+        "message": "Uspiješno ste se registrovali!"
     },
     "final": {
         "welcome": "Dobrodošli",
-        "message": "Uspiješno ste se registrovali!",
         "username": "Vaše korisničko ime je",
-        "email": "e-mail",
+        "email": "E-mail",
         "and": "i"
     },
     "schema": {
@@ -37,8 +37,8 @@
             "fnameReq": "Unesite ime",
             "lNameReq": "Unesite prezime",
             "usernameReq": "Unesite korisničko ime",
-            "min3": "Ovo polje mora sadržati min 3 karaktera",
-            "max50": "Ovo polje mora sadržati max 50 karaktera"
+            "min3": "Ovo polje mora sadržati više od 3 karaktera",
+            "max50": "Ovo polje mora sadržati manje od 50 karaktera"
         },
         "stepTwo": {
             "emailReq": "Unesite e-mail adresu",
